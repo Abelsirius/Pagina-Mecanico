@@ -128,14 +128,14 @@ header.active .nav_menu_icon i{
 }
 
 .titulo_inicio{
-    font-size: 6.5rem;
+    font-size: 5rem;
     color: #fff;
     border-bottom: 5px solid #fff;
     margin-bottom: 10px;
 }
 
 .description_inicio{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     text-shadow:  0 0 10px #222;
 }
@@ -533,7 +533,7 @@ header.active .nav_menu_icon i{
 
 label{
     margin: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: var(--font-semi-bold);
 }
 
@@ -562,7 +562,7 @@ input[type=number] { -moz-appearance:textfield; }
 input[type='submit']{
     border-bottom: none;
     color:var(--color-white);
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-weight: var(--font-semi-bold);
     background-color: #fff5;
     width: 300px;
@@ -678,6 +678,7 @@ textarea:hover{
 .footer_reglas p{
     padding: 10px ;
     color: var(--color-black);
+    font-size: 0.78rem;
 }
 
 
@@ -722,7 +723,7 @@ textarea:hover{
     top: 0;
     right: 0;
     height: 100vh;
-    width: 300px;
+    width: 30%;
     flex-direction: column;
     transition: .3s ease-in-out all;
     }
@@ -787,7 +788,7 @@ textarea:hover{
 
 @media screen and (max-width: 400px){
     .card_servicio{
-        width: 100%;
+        width: 80%;
     }
     input{
         width: 100%;
@@ -817,10 +818,10 @@ textarea:hover{
         margin: 0 15px;
     }
     .titulo_inicio{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .description_inicio{
-        font-size: 1rem;
+        font-size: .7rem;
     }
     .subtitulo_about{
         width: 100%;
@@ -837,5 +838,68 @@ textarea:hover{
     }
     .imgBx_contact {
         background-image: linear-gradient(180deg,rgba(15, 15, 15, 0.1) 50%,rgba(0, 0, 0, 0.84) 100%),url(../img/contact.jpeg);
+    }
+    .description_about,
+    .card_description_servicio{
+        font-size: 0.90rem;
+        text-align: center;
+    }
+
+    .subtitulo_about_description,.description{
+        font-size: 1.3rem;
+        font-weight: lighter;
+    }
+    .titulo_about{
+        font-size: 1.7rem;
+    }
+
+    .btn_explorar{
+        font-size: 0.70rem;
+    }
+
+    .titulo {
+        font-size: 1.7rem;
+    }
+    .card_titulo_servicio{
+        font-size: 1.3rem;
+    }
+   
+    .card_galeria{
+        width: 80%;
+        margin: auto;
+    }
+
+    .item_data p{
+        font-size: 1rem;
+    }
+
+    .item_data i {
+        font-size: 1.7rem;
+    }
+    .footer_reglas p{
+        padding: 0;
+    }
+
+    .form{
+        padding: 0 15px;
+        margin: 0;
+    }
+    .description_footer{
+        text-align: center;
+        font-size: 1rem;
+    }
+    .footer_reglas p{
+        font-size: 0.58rem;
+    }
+
+    .titulo_description_works_done{
+        font-size: 1.3rem;
+    }
+    .card_car img{
+        width: 300px;
+        height: 170px;
+    }
+    .nav_menu{
+        width: 50%;
     }
 }
