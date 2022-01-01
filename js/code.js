@@ -109,3 +109,20 @@ const darkTheme = () =>{
 
 
 icono.addEventListener('click',darkTheme)
+
+
+/* -------------------------- ScrollReveal --------------------- */
+
+
+const sr = ScrollReveal({
+  distance:"60px",
+  duration:2800,
+  reset:true
+})
+
+
+sr.reveal(".content_titulo_inicio,.titulo_about,.subtitulo_about,.imgBx_about,.content_titulo,.card_servicio,.card_galeria,.content_data,.geolocation_maps,.content_form,.footer",{
+  origin: "top",
+  interval: 100
+})
+
