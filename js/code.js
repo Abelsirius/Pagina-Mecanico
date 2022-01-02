@@ -121,8 +121,49 @@ const sr = ScrollReveal({
 })
 
 
-sr.reveal(".content_titulo_inicio,.titulo_about,.subtitulo_about,.imgBx_about,.content_titulo,.card_servicio,.card_galeria,.content_data,.geolocation_maps,.content_form,.footer",{
+sr.reveal(".content_titulo_inicio,.titulo_about,.subtitulo_about,.imgBx_about,.content_titulo,.card_servicio,.card_galeria,.content_data,.geolocation_maps,.content_form,.content_up_footer,.footer_reglas,",{
   origin: "top",
   interval: 100
 })
 
+
+/* -------------------- Form WhatsApp ------------------ */
+
+
+let contentIcon = document.querySelector('.content_icon_whatsapp');
+let formWhatsApp = document.querySelector('.form_whatsapp')
+
+
+const toogleFormWhatsApp = () =>{
+       
+   formWhatsApp.classList.toggle('active');
+
+}
+
+contentIcon.addEventListener('click',toogleFormWhatsApp)
+
+/* -------------------- Api WhatsApp ------------------ */
+
+const sendMensaje = (e) =>{
+   e.preventDefault()
+   let name = document.querySelector('.nombre-input-whatsapp');
+   let text = document.querySelector('.mensaje-input-whatsapp');
+   let url = "https://api.whatsapp.com/send?phone=51922260216&text=Nombre: %0A" + name.value + "%0a%0AMensaje: %0A" + text.value + "%0A";
+   if(name.value.length > 0 && text.value.length > 0){
+    window.open(url)
+    name.value = '';
+    text.value = '';
+    formWhatsApp.classList.remove('active');
+   }else{
+       if(formWhatsApp.lastElementChild.classList.contains('error-whatsapp') === false){
+        let error = document.createElement('H3');
+        error.classList.add('error-whatsapp')
+        error.textContent = "Por favor rellene los campos";
+        error.style.color = '#fa4e4e';
+        error.style.padding = '0 0 8px 0'
+        formWhatsApp.appendChild(error)
+       }
+   }
+}
+
+formWhatsApp.addEventListener('submit',sendMensaje)
