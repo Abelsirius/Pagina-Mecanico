@@ -121,7 +121,7 @@ const sr = ScrollReveal({
 })
 
 
-sr.reveal(".content_titulo_inicio,.titulo_about,.subtitulo_about,.imgBx_about,.content_titulo,.card_servicio,.card_galeria,.content_data,.geolocation_maps,.content_form,.content_up_footer,.footer_reglas,",{
+sr.reveal(".content_titulo_inicio,.titulo_about,.subtitulo_about,.imgBx_about,.content_titulo,.card_servicio,.card_galeria,.content_data,.geolocation_maps,.content_form,.content_up_footer,.footer_reglas",{
   origin: "top",
   interval: 100
 })
@@ -132,6 +132,7 @@ sr.reveal(".content_titulo_inicio,.titulo_about,.subtitulo_about,.imgBx_about,.c
 
 let contentIcon = document.querySelector('.content_icon_whatsapp');
 let formWhatsApp = document.querySelector('.form_whatsapp')
+let btnWhatsApp = document.querySelector('#btn_close_whats');
 
 
 const toogleFormWhatsApp = () =>{
@@ -141,6 +142,12 @@ const toogleFormWhatsApp = () =>{
 }
 
 contentIcon.addEventListener('click',toogleFormWhatsApp)
+
+const closeFormWhats = () =>{
+  formWhatsApp.classList.remove('active');
+}
+
+btnWhatsApp.addEventListener('click',closeFormWhats)
 
 /* -------------------- Api WhatsApp ------------------ */
 
