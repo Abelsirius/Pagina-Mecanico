@@ -636,6 +636,81 @@ textarea:hover{
      color: var(--color-lighler);
 }
 
+/* ---------- Form - whatsapp -----------*/
+
+.content_form_whatsapp{
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 100;
+}
+.form_whatsapp{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: #fafffb;
+    padding: 10px 25px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: .5s ease ;
+
+}
+.form_whatsapp.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+
+    
+}
+.form_whatsapp input{
+     width: 170px;
+     border-color: #5a5;
+    color: #001a05;
+    font-weight: 600;
+
+}
+
+.form_whatsapp textarea {
+    max-width: 170px;
+    min-width: 170px;
+    max-height: 150px;
+    min-height: 150px;
+    padding: 10px;
+    color: #001a05;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.5s ease all;
+}
+.content_icon_whatsapp{
+    position: absolute;
+    bottom: -20px;
+    right: -55px;
+}
+
+.content_icon_whatsapp img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.content_icon_whatsapp:active img{
+    transform: scale(0.8);
+}
+
+
+
+.form_whatsapp textarea:hover{
+
+    background-color: #ffff;
+}
+
+.form_whatsapp input[type='submit']{
+    background-color: #178730;
+    color: #fff;
+}
+
 /* --------- footer -------- */
 
 .conent_data_footer{
